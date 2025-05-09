@@ -134,8 +134,3 @@ Below is a textual description of the architecture for your coal mining disease 
 - **Flask Backend API**: Receives requests, processes input, and invokes the machine learning model for inference.
 - **Hybrid ML Model (RandomForest/XGBoost)**: Performs disease risk prediction and returns recommendations.
 - **Response Flow**: The backend sends prediction results and recommendations back to the frontend, which displays them to the user.
-
-> **Note:**  
-> The error you encountered is due to GitHub not supporting Mermaid diagrams in all contexts.  
-> To avoid this, use a textual or image-based architecture diagram in your README, or ensure Mermaid syntax is only used where supported (e.g., GitHub Issues, Discussions, or Markdown files with Mermaid preview enabled).
-```
