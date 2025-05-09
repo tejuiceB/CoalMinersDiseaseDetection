@@ -1,6 +1,6 @@
-# Coal Miner Disease Detection Project
+# CoalMiner Project
 
-This project is a full-stack application for predicting disease risk levels in coal miners using a hybrid machine learning model. It consists of a React frontend and a Flask backend, with a trained model for inference.
+This project predicts disease risk levels for coal miners using a hybrid machine learning model (RandomForest/XGBoost). It features a React frontend and a Flask backend API.
 
 ---
 
@@ -17,18 +17,15 @@ Coal miners are exposed to hazardous environments that can lead to various respi
 
 ---
 
-## System Architecture
-
-Below is a high-level architecture diagram of the project:
+## Architecture
 
 ```mermaid
 graph TD
     A[User (Miner/Doctor)] -->|Inputs Data| B[React Frontend]
-    B -->|POST /predict| C[Flask Backend API]
+    B -->|POST| C[Flask Backend API]
     C -->|Model Inference| D[Hybrid ML Model (RandomForest/XGBoost)]
     D -->|Prediction & Recommendations| C
     C -->|Response| B
-    B -->|Displays Results| A
 ```
 
 ---
@@ -43,6 +40,14 @@ flowchart LR
     Model --> Response[API Response]
     Response --> Display[Show Results & Recommendations]
 ```
+
+---
+
+## Components
+
+- **Frontend:** React app for user input and displaying results.
+- **Backend:** Flask API for model inference and recommendations.
+- **Model:** Hybrid ML model trained on mining health data.
 
 ---
 
@@ -63,17 +68,25 @@ Below are screenshots of the application at various stages:
    ![Recommendations](/frontend/screenshot/image5.png)
 ---
 
-## How to Run
+## Usage
 
-1. **Backend**
-   - Install dependencies: `pip install -r requirements.txt`
-   - Run: `python backend/app.py`
+1. Start the Flask backend (`python backend/app.py`).
+2. Start the React frontend (`npm start` in `frontend`).
+3. Enter miner health/environment data in the UI to get predictions.
 
-2. **Frontend**
-   - Install dependencies: `npm install`
-   - Run: `npm start`
+---
 
-3. **Access the app** at `http://localhost:3000`
+## Model Features
+
+- Age, Years in Mining, Smoking History, Cough Frequency, Breathlessness, Chest Pain, Oxygen Saturation, Heart Rate, Body Temperature, Air Quality Index, PM2.5, CO Level, Ambient Temperature, PPE Usage, Medication Use.
+
+---
+
+## Prediction Output
+
+- **Risk Level:** Low, Medium, or High
+- **Probability:** Model confidence
+- **Recommendations:** Health and safety actions
 
 ---
 
@@ -87,4 +100,38 @@ Below are screenshots of the application at various stages:
 ---
 
 ## Project Structure
-
+```plaintext
+CoalMiner/
+├── backend/
+│   ├── app.py                # Flask API entry point
+│   ├── requirements.txt      # Backend dependencies
+│   ├── model/
+│   │   ├── model.pkl         # Trained ML model
+│   │   ├── preprocess.py     # Data preprocessing scripts
+│   │   └── utils.py          # Utility functions
+│   └── tests/
+│       └── test_api.py       # API test cases
+├── frontend/
+│   ├── public/
+│   │   └── index.html        # HTML template
+│   ├── src/
+│   │   ├── App.js            # Main React component
+│   │   ├── components/
+│   │   │   ├── Form.js       # Input form component
+│   │   │   ├── Results.js    # Results display component
+│   │   │   └── Header.js     # Header component
+│   │   ├── styles/
+│   │   │   └── App.css       # CSS styles
+│   │   └── utils/
+│   │       └── api.js        # API interaction functions
+│   └── package.json          # Frontend dependencies
+├── data/
+│   ├── synthetic_data.csv    # Training dataset
+│   └── schema.json           # Data schema
+├── docs/
+│   ├── README.md             # Project documentation
+│   └── diagrams/
+│       ├── architecture.png  # Architecture diagram
+│       └── data_flow.png     # Data flow diagram
+└── .gitignore                # Git ignore file
+```
