@@ -17,19 +17,6 @@ Coal miners are exposed to hazardous environments that can lead to various respi
 
 ---
 
-## Architecture
-
-```mermaid
-graph TD
-    A[User (Miner/Doctor)] -->|Inputs Data| B[React Frontend]
-    B -->|POST| C[Flask Backend API]
-    C -->|Model Inference| D[Hybrid ML Model (RandomForest/XGBoost)]
-    D -->|Prediction & Recommendations| C
-    C -->|Response| B
-```
-
----
-
 ## Data Flow Diagram
 
 ```mermaid
