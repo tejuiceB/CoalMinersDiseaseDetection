@@ -5,6 +5,9 @@
   width: 100%;
   top: 0;
   z-index: 1000;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  border-bottom: 1px solid #eaeaea;
 }
 
 .nav-container {
@@ -68,4 +71,9 @@
 
 .nav-links a:hover::after, .nav-links a.active::after {
   width: 100%;
+}
+
+body, #root, .App {
+  padding-top: 90px; /* Adjust this value to match your navbar height */
+  box-sizing: border-box;
 }

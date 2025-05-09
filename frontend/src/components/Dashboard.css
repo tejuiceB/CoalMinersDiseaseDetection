@@ -1,0 +1,80 @@
+.dashboard-container {
+  padding: 32px;
+  background: #f7f9fa;
+  min-height: 100vh;
+}
+
+.dashboard-summary {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.dashboard-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 24px;
+  min-width: 260px;
+  flex: 1;
+}
+
+.dashboard-card h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.risk-high {
+  color: #d32f2f;
+  font-weight: bold;
+}
+.risk-medium {
+  color: #fbc02d;
+  font-weight: bold;
+}
+.risk-low {
+  color: #388e3c;
+  font-weight: bold;
+}
+.alert-high {
+  color: #e65100;
+  font-weight: bold;
+}
+.alert-normal {
+  color: #388e3c;
+  font-weight: bold;
+}
+
+.dashboard-actions {
+  margin-bottom: 24px;
+}
+
+.dashboard-actions button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.dashboard-actions button:hover {
+  background: #1565c0;
+}
+
+.dashboard-form {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.dashboard-info {
+  background: #e3f2fd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 32px;
+}

@@ -201,3 +201,22 @@
     opacity: 1;
   }
 }
+
+/* Ensure the main content is not hidden behind the navbar */
+.main-content {
+  margin-top: 70px; /* Adjust this value to match your Navbar height */
+  padding: 24px;
+}
+
+/* Optional: If you use an h1 for the page title */
+.main-content h1,
+.page-title {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* If your Navbar is fixed, ensure body or root does not have extra margin/padding */
+body, #root {
+  margin: 0;
+  padding: 0;
+}

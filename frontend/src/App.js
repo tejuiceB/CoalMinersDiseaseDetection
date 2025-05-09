@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import DiseaseDetection from './components/DiseaseDetection';
 import Footer from './components/Footer';
+import Dashboard from './components/Dashboard';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/disease-detection" element={<DiseaseDetection />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
