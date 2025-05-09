@@ -1,0 +1,17 @@
+# This file ensures the frontend folder is tracked by git.
+
+The arrow on the `frontend` folder icon in Windows Explorer usually means the folder is a shortcut or is compressed, but in the context of git, it may also indicate a symbolic link or a submodule.
+
+Given your previous git warnings, your `frontend` folder was previously a git submodule or contained its own `.git` directory. If you removed the `.git` folder inside `frontend`, but the folder still appears empty on GitHub, it's likely because:
+
+- The folder contains only ignored files (like `.env`, `node_modules/`), so git doesn't track any files inside.
+- There are no tracked files in `frontend`, so git doesn't push the folder to GitHub.
+
+**How to fix:**  
+Add a `.gitkeep` file to ensure the folder is tracked.
+
+---
+
+### [.gitkeep](file:///c%3A/Users/Tejas/OneDrive/Desktop/coalMiner/frontend/.gitkeep)
+
+Add this file to the `frontend` folder:
